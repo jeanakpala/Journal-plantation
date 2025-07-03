@@ -201,6 +201,126 @@ def get_calendar_events(username):
         })
     return events
 
+# CSS personnalise pour un theme agricole
+st.markdown("""
+<style>
+/* Fond general et style de base */
+body {
+    background-color: #F5F5DC; /* Beige ble */
+    color: #4CAF50; /* Vert feuille */
+    font-family: 'Arial', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Handlee', cursive;
+    color: #8B4513; /* Brun terre */
+}
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.stApp {
+    background: linear-gradient(to bottom, #4CAF50, #F5F5DC);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style des boutons */
+.stButton > button {
+    background-color: #8B4513; /* Brun terre */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.stButton > button:hover {
+    background-color: #A0522D; /* Brun clair */
+}
+
+/* Style des champs de saisie */
+.stTextInput > div > div > input,
+.stSelectbox > div > div > select,
+.stDateInput > div > div > input,
+.stTextArea > div > div > textarea {
+    background-color: #FFFFFF;
+    border: 2px solid #4CAF50; /* Vert feuille */
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 16px;
+}
+.stTextInput > div > div > input:focus,
+.stSelectbox > div > div > select:focus,
+.stDateInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: #FFD700; /* Jaune soleil */
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+/* Style du menu lateral */
+.stSidebar {
+    background-color: #4CAF50; /* Vert feuille */
+    border-right: 2px solid #8B4513;
+}
+.stSidebar .stSelectbox > div > div > select {
+    background-color: #F5F5DC; /* Beige ble */
+    color: #8B4513;
+}
+
+/* Style des messages (success, error, warning) */
+.stAlert {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+.stSuccess {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+    border: 1px solid #4CAF50;
+}
+.stError {
+    background-color: #FFEBEE;
+    color: #D32F2F;
+    border: 1px solid #F44336;
+}
+.stWarning {
+    background-color: #FFF8E1;
+    color: #EF6C00;
+    border: 1px solid #FF9800;
+}
+
+/* Style du tableau */
+.stDataFrame {
+    background-color: #FFFFFF;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+}
+.stDataFrame table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.stDataFrame th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+}
+.stDataFrame td {
+    padding: 8px;
+    border-bottom: 1px solid #4CAF50;
+}
+
+/* Style du calendrier */
+.stCalendar {
+    background-color: #FFFFFF;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    padding: 10px;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # Interface principale
 st.title("🌱 MonPlanting - Journal de Plantation Agricole")
 
